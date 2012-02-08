@@ -63,9 +63,9 @@ sub fbz {
 sub oppai {
     my $count = shift;
     print <<OPPAI x $count;
-   _   ∩
-(  ﾟ∀ﾟ)彡　おっぱい！おっぱい！
-  ⊂彡
+　 _　　∩
+(　ﾟ∀ﾟ)彡　おっぱい！おっぱい！
+　⊂彡
 OPPAI
 
     exit;
