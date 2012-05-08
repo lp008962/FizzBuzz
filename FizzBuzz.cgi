@@ -96,7 +96,7 @@ sub oppai {
 　⊂彡
 ";
     push(@result, $aa) for 1 .. $count;
-    render(@result);
+    return @result;
 
 }
 
