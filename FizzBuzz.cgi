@@ -10,10 +10,9 @@ use Scalar::Util 'looks_like_number';
 my @result = ();
 
 my $q = CGI->new;
+my %param = map { $_ => $q->param($_) } $q->all_parameters;
 
 my $count=0;
-my %param = map { $_ => $q->param($_)} $q->all_parameters;
-
 foreach ( values %param ) {
     $count++ if $_ =~ /^3\.14$/;
 }
@@ -33,7 +32,6 @@ my %pattern = (
 );
 
 @result = FizzBuzz();
-
 render(@result);
 
 sub render {
@@ -90,12 +88,12 @@ sub decrement {
 sub oppai {
     my $count = shift;
     my @result;
-    my $aa ="
+    my $AA ="
 　 _ 　∩
 (　゜∀゜)彡　おっぱい！おっぱい！
 　⊂彡
 ";
-    push(@result, $aa) for 1 .. $count;
+    push(@result, $AA) for 1 .. $count;
     render(@result);
 
 }
